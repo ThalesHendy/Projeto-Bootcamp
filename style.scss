@@ -15,7 +15,9 @@
 }
 a{
     text-decoration: none;
+
 }
+
 body{
     background: linear-gradient(180deg, rgba(12, 112, 242, 0.5) 19.91%, rgba(12, 112, 242, 0) 24.84%), #303030;
     background-repeat: no-repeat;
@@ -159,4 +161,53 @@ label{
     font-size:25px;
 }
 }
+footer{
+    width: 100%;
+    background-color: var(--azul-dnc);
 
+    .linha1{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 330px;
+    }
+    ul{
+        list-style: none;
+        font-size: 18px;
+        margin: 20px 0px 20px 0px;
+    }
+    ul li{
+        text-align: center;
+        font-size: 18px;
+    }
+    ul li a:hover{
+        color: var(--cinza-hover);
+    }
+    nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    }
+    h5{
+        text-align: center;
+        color: white;
+        font-weight: 800;
+        font-size: 18px;
+
+        background-color: var(--preto-dnc);
+        border-radius: 10px;
+        padding: 15px 15px 15px 15px;
+        margin-bottom: 15px;
+
+
+    
+
+    }
+    .endereço{
+        font-weight: 600;
+        font-size: 18px;
+        width: 20%;
+        text-align: center;
+    }
+}
