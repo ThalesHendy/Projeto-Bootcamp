@@ -1,17 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap');
+
+:root{
+    --azul-dnc: #0C70F2;
+    --preto-dnc: #303030;
+    --cinza-hover: #C9C9C9;
+    
+    --fonte-padrao: 'Inter';
+}
 *{
     padding: 0px;/*margem interna*/
     margin: 0px;/*margem externa*/
-    font-family: inter;
+    font-family: var(--fonte-padrao);
     color: white;
 }
 a{
     text-decoration: none;
 }
+body{
+    background: linear-gradient(180deg, rgba(12, 112, 242, 0.5) 19.91%, rgba(12, 112, 242, 0) 24.84%), #303030;
+    background-repeat: no-repeat;
+}
+    /* Menu de Navegação Principal */
 #principal{
     width: 100%;
     height: 100px;
     border: 1px solid black;
-    background-color: #303030;
+    background-color: var(--preto-dnc);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,18 +38,18 @@ a{
     }
 
     div a:houver{
-        color:#cccccc;
+        color:var(--cinza-hover);
     }
     
     button {
         margin-right: 5%;
-        background-color:  #0C70F2;
+        background-color:  var(--azul-dnc);
         border: 0px;
         height: 40px;
         width: 80px;
-        font-size: 20px;
-        font-weight: 600px;
-        color: white; 
+        font-size:20px;
+        font-weight: 600;
+        color:white;
         /*box shadow - horizontal , vertical - blur/esfumaçado - cor*/
         box-shadow: 3px 2px 4px 0px rgba(12, 112, 242, 0.25);
         cursor: pointer;
@@ -48,3 +62,101 @@ a{
     align-items:center;
     margin-left:5%
 }
+
+/* Seção Principal do site */
+
+section{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top:100px;
+    margin-bottom:100px;
+}
+
+header{
+    color:white;
+    font-family: var(--fonte-padrao);
+
+
+    h1{
+        text-transform: uppercase;
+        font-size:80px;
+        font-weight: 900;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    h2{
+        text-align: center;
+        font-size:40px;
+        font-weight: 700;
+
+        margin-bottom: 100px;
+    }
+
+    .invert{
+        background-color: black;
+        font-weight: bold;
+        padding:5px;
+    }
+}
+/* Formulario */
+
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+form{
+    color:white;
+    font-family: var(--fonte-padrao);
+    font-size:30px;
+    font-weight: 600;
+    width: 600px;
+
+input{
+    border-radius: 10px;
+    height:30px;
+    border:0px;
+    font-size:20px;
+    padding:10px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+label{
+    margin: 10px 0px 10px 0px;
+}
+
+::placeholder{
+    color: rgba(57, 57, 57, 0.5);
+}
+
+[type="checkbox"]{
+    transform: scale(1.7);
+}
+
+[type="submit"]{
+    background-color: rgba(12, 112, 242, 0.9);
+    width:100%;
+    height:56px;
+    font-size: 32px;
+    color:white;
+    margin-top:100px;
+    box-shadow: 0px 6px 4px rgba(12, 112, 242, 0.25);
+    cursor:pointer;
+}
+}
+
+.checkbox-itens{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+
+.checkbox-itens label{
+    font-size:25px;
+}
+}
+
