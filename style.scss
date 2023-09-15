@@ -8,8 +8,6 @@
     --fonte-padrao: 'Inter';
 }
 *{
-    padding: 0px;/*margem interna*/
-    margin: 0px;/*margem externa*/
     font-family: var(--fonte-padrao);
     color: white;
 }
@@ -21,6 +19,8 @@ a{
 body{
     background: linear-gradient(180deg, rgba(12, 112, 242, 0.5) 19.91%, rgba(12, 112, 242, 0) 24.84%), #303030;
     background-repeat: no-repeat;
+    margin:0px; /* Margem Externa */ 
+    padding:0px; /* Margem Interna */
 }
     /* Menu de Navegação Principal */
 #principal{
@@ -174,11 +174,14 @@ footer{
     ul{
         list-style: none;
         font-size: 18px;
-        margin: 20px 0px 20px 0px;
+        font-weight: 600;
+        padding: 0px;
     }
     ul li{
         text-align: center;
         font-size: 18px;
+        font-weight: 600px;
+        margin:20px 0px 20px 0px;
     }
     ul li a:hover{
         color: var(--cinza-hover);
@@ -187,27 +190,80 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    height: 330px;
     }
     h5{
         text-align: center;
         color: white;
         font-weight: 800;
         font-size: 18px;
-
         background-color: var(--preto-dnc);
         border-radius: 10px;
         padding: 15px 15px 15px 15px;
         margin-bottom: 15px;
-
-
-    
-
     }
     .endereço{
-        font-weight: 600;
         font-size: 18px;
+        font-weight: 600;
         width: 20%;
         text-align: center;
     }
+    .linha2{
+        display: flex;
+        justify-content: center;
+        background-color:var(--azul-dnc);
+    }
+    .linha2 a{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .linha2 :hover{
+        color: var(--cinza-hover);
+    }
+    .linha2 a:first-child{
+        border-right: 2px solid white;
+    }
+}
+@media screen and (max-width: 600px){
+    /*menu*/
+    #principal{
+        flex-direction: column;
+        height:auto;
+
+        button{
+            width: 100%;
+            margin: 0%;
+        }
+    }
+    #menu{
+        flex-direction: column;
+        width: 100px;
+        margin: 0px;
+        
+        a{
+            display: flex;
+            height:50px;
+            align-items: center;
+            padding: 0px;
+        }
+    }
+    /*Section*/
+    section{
+        h1{
+            font-size: 38px;
+        }
+        h2{
+            font-size: 28px;
+            padding-right: 4px;
+            padding-left: 15px;
+        }
+    }
+    form{
+        width:95%;
+        font-size: 20px;
+    }
+    .checkbox-itens{
+        font-size: 17px;
+    }
+        
 }
